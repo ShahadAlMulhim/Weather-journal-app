@@ -58,13 +58,16 @@ body{
 }
 .zip{
     margin-top: 3rem;
+    font-size: 15px;
     
 }
-.feel{
-    
+.feelings{
+    font-size: 15px;
 }
 .title{
-
+    margin-bottom: 0.8rem;
+    color: #3b4a6b;
+    font-weight: 550;
 }
 .entry{
     margin-top: 2rem;
@@ -121,19 +124,19 @@ button:focus {
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
     color: #D8D8D8; 
-    font-size: 14px;
+    font-size: 15px;
 
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
     color: #D8D8D8; 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
     color: #D8D8D8; 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 
 } 
