@@ -35,10 +35,9 @@ function listening(){
 
 // GET route
 app.get('/app', getData);
-
-function getData(){
-    console.log(req);
-    req.send(projectData);
+function getData(req, res){
+    console.log(projectData);
+    res.send(projectData);
 };
 
 // POST route 
@@ -48,5 +47,5 @@ app.post('/app', function(req, res){
     projectData['temp'] = req.body.temp;
     projectData['date'] = req.body.date;
     projectData['content'] = req.body.content;
-    res.send("You have reach to post route!")
+    res.send(projectData);
 });
