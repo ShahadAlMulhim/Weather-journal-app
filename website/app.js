@@ -17,9 +17,9 @@ button.addEventListener('click' , checkInput);
 function fetchWeather(){
     // Get the user input value 
     const feeling = document.getElementById('feelings').value;
+    
     fetchApiInfo()
-    .then(function(data){ // if the app fetch the weathe info then post the data to endpoint in server.js
-        console.log(data);
+    .then(function(data){ // if the app fetch the weather info then post the data to endpoint in server.js
         postData('/app', {
             temp: data.main.temp,
             date: newDate,
@@ -89,7 +89,7 @@ function checkInput() {
     const feeling = document.getElementById('feelings').value;
     
     if (zip === "" || feeling === "" ) {
-        console.log('You should enter the values!');
+        console.log('You should enter values in inputs!');
         return false;
     } else if (!isValidZipCode(zip)){
         zipError.innerHTML = 'Zip code is not valid!';
