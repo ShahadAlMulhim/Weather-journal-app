@@ -3,12 +3,12 @@ const APIKey = '9a6d61da498a766a38506d632834a197';
 const BaseURL = `https://api.openweathermap.org/data/2.5/weather&units=metric`; // units=metric query the information in celsius format
 const zipError = document.getElementById('notValidZip');
 const button = document.getElementById('generate');
-let zipInput = document.getElementById('zip');
+const zip = document.getElementById('zip')
 
 
 // Create a new date instance dynamically with JS
-let d = new Date();
-let newDate = d.getDate() + '/' + (d.getMonth() + 1) +'/'+ d.getFullYear();
+var d = new Date();
+var newDate = d.getDate() + '/' + (d.getMonth() + 1) +'/'+ d.getFullYear();
 
 
 button.addEventListener('click' , checkInput);
@@ -45,12 +45,13 @@ const fetchApiInfo = async()=>{
 
 const postData = async (url = '', data = {}) => {
     console.log(data);
+    
     const response = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data)
     });
     try {
         const newData = await response.json();
