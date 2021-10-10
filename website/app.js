@@ -1,6 +1,6 @@
 
 /* Global Variables */
-const APIKey = '9a6d61da498a766a38506d632834a197';
+// const APIKey = 
 const BaseURL = `https://api.openweathermap.org/data/2.5/weather&units=metric`; // units=metric query the information in celsius format
 const zipError = document.getElementById('notValidZip');
 const button = document.getElementById('generate');
