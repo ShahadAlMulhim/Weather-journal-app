@@ -1,5 +1,6 @@
+
 /* Global Variables */
-// const APIKey = '';
+const APIKey = '9a6d61da498a766a38506d632834a197';
 const BaseURL = `https://api.openweathermap.org/data/2.5/weather&units=metric`; // units=metric query the information in celsius format
 const zipError = document.getElementById('notValidZip');
 const button = document.getElementById('generate');
@@ -48,6 +49,7 @@ const postData = async (url = '', data = {}) => {
     
     const response = await fetch(url, {
         method: 'POST',
+        credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -91,7 +93,6 @@ function checkInput() {
     
     if (zip === "" || feeling === "" ) {
         console.log('You should enter values in inputs!');
-        return false;
     } else if (!isValidZipCode(zip)){
         zipError.innerHTML = 'Zip code is not valid!';
         console.log('Zip code is not valid!');

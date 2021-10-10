@@ -57,6 +57,7 @@ body{
     margin-top: 1rem;
     background: rgba(59, 74, 107, .4);
     width: 20rem;
+    margin-bottom: 2rem;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
